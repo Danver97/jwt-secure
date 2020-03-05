@@ -1,6 +1,6 @@
 {
-  "name": "jwt-secure",
-  "version": "1.0.0",
+  "name": "@danver97/jwt-secure",
+  "version": "1.0.1",
   "description": "Creates signed jwt tokens, managing keys from the most important cloud providers",
   "main": "index.js",
   "scripts": {
