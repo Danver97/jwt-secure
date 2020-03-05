@@ -1,6 +1,6 @@
 const base64url = require('base64url');
 
-class KeyManager {
+class JWTSecure {
     /**
      * 
      * @param {Object} options 
@@ -72,4 +72,4 @@ class KeyManager {
     }
 }
 
-module.exports = KeyManager;
+module.exports = JWTSecure;

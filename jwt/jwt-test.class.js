@@ -1,9 +1,9 @@
-const KeyManager = require('./keyManager.class');
+const JWTSecure = require('./jwt-secure.class');
 const NodeRSA = require('node-rsa');
 const uuid = require('uuid').v4;
 const jwt = require('jsonwebtoken');
 
-class TestKeyManager extends KeyManager {
+class JWTTest extends JWTSecure {
     /**
      * 
      * @param {Object} options 
@@ -62,4 +62,4 @@ class TestKeyManager extends KeyManager {
     }
 }
 
-module.exports = TestKeyManager;
+module.exports = JWTTest;

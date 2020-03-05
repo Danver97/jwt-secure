@@ -1,14 +1,14 @@
 const assert = require('assert');
 const jwt = require('jsonwebtoken');
-const AWSKeyManager = require('../keyManager')('aws');
+const JWTAWS = require('..')('aws');
 const AWS = require('aws-sdk');
 
 const kms = new AWS.KMS({ apiVersion: '2014-11-01' });
 
 const waitAsync = ms => new Promise(resolve => setTimeout(resolve, ms));
 
-describe('AWSKeyManager unit test', function () {
-    const awsKM = new AWSKeyManager({ rsabit: 2048, algo: 'rs256', rotationInterval: 8, keyExpirationInterval: 7 });
+describe('JWTAWS unit test', function () {
+    const awsKM = new JWTAWS({ rsabit: 2048, algo: 'rs256', rotationInterval: 8, keyExpirationInterval: 7 });
     let jwtPayload;
 
     before(async function () {

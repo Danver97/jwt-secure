@@ -1,4 +1,4 @@
-const KeyManager = require('./keyManager.class');
+const JWTSecure = require('./jwt-secure.class');
 const jwt = require('jsonwebtoken');
 const AWS = require('aws-sdk');
 const base64url = require('base64url');
@@ -11,7 +11,7 @@ const credentials = new AWS.Credentials({
 AWS.config = new AWS.Config({ region, credentials });
 const kms = new AWS.KMS({ apiVersion: '2014-11-01' });
 
-class AWSKeyManager extends KeyManager {
+class JWTAWS extends JWTSecure {
     /**
      * 
      * @param {Object} options 
@@ -91,4 +91,4 @@ class AWSKeyManager extends KeyManager {
     }
 }
 
-module.exports = AWSKeyManager;
+module.exports = JWTAWS;

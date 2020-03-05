@@ -1,11 +1,11 @@
 const assert = require('assert');
 const jwt = require('jsonwebtoken');
-const TestKeyManager = require('../keyManager')('test');
+const JWTTest = require('..')('test');
 
 const waitAsync = ms => new Promise(resolve => setTimeout(resolve, ms));
 
-describe('TestKeyManager unit test', function () {
-    const testKM = new TestKeyManager({ rsabit: 2048, algo: 'rs256', rotationInterval: 10, keyExpirationInterval: 2 });
+describe('JWTTest unit test', function () {
+    const testKM = new JWTTest({ rsabit: 2048, algo: 'rs256', rotationInterval: 10, keyExpirationInterval: 2 });
     let jwtPayload;
 
     before(async function () {
