@@ -3,7 +3,7 @@
 This package helps you create signed jwt tokens, creating managing RSA keys for you.  
 It automatically creates and rotates at a given interval RSA keys.
 
-Currently only supports AWS, but if needed you can issue a PR or open an issue.
+Currently only supports AWS, but if needed you can issue a PR or open an issue to expand the supported cloud providers.
 The interface can be easily implemented.
 
 ## Usage
